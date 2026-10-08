@@ -1,0 +1,132 @@
+/* Replace with new modern design theme for OpenLearn */
+
+@import "tailwindcss";
+
+:root {
+  /* Primary Color Palette - Professional Blue */
+  --primary: #0066cc;
+  --primary-dark: #0052a3;
+  --primary-light: #3399ff;
+
+  /* Neutral Palette */
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --surface: #f8f9fa;
+  --border: #e0e0e0;
+
+  /* Accent Colors */
+  --accent: #00b4d8;
+  --success: #06a77d;
+  --warning: #f77f00;
+  --destructive: #d62828;
+
+  /* Semantic Tokens */
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
+  line-height: 1.6;
+}
+
+/* Utility Classes */
+.card-shadow {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-shadow:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn-secondary {
+  background-color: var(--surface);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: #4b5563;
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+/* Additional text color utilities */
+.text-foreground {
+  color: var(--foreground);
+}
+
+.text-text-primary {
+  color: var(--text-primary);
+}
+
+.text-text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-text-muted {
+  color: var(--text-muted);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.bg-surface {
+  background-color: var(--surface);
+}
+
+/* Floating Stats Animations */
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(-5%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  50% { transform: translateY(0); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s infinite;
+}
+
+@keyframes bounce-delayed {
+  0%, 100% { transform: translateY(0); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  50% { transform: translateY(-5%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+}
+
+.animate-bounce-delayed {
+  animation: bounce-delayed 3.5s infinite;
+}
